@@ -12,14 +12,16 @@ let initialState = {
         completed: false,
         text: 'Initial todo for demo purposes'
     }
-    ]    
+    ],
+    user: {
+        username: 'kurt',
+        id: 13
+    }
 };
 
 let store = configureStore(initialState);
 
 //configure and create our store 在这个位置创建store并传下去
-
-
 
 render(
     <Provider store={store} >
