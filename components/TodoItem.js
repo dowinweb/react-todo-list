@@ -3,6 +3,7 @@ import React from 'react';
 // import actions from '../redux/action';
 
 export default class TodoItem extends React.Component {
+
     handleComplete(){
         // this.props.dispatch(actions.completeTodo(this.props.todo.id));
         this.props.actions.completeTodo(this.props.todo.id);
@@ -12,6 +13,7 @@ export default class TodoItem extends React.Component {
         this.props.actions.deleteTodo(this.props.todo.id);
     }
     render (){
+        console.log('context', this.context);
         return(
             <li>
                 <div>{this.props.todo.text}</div>
